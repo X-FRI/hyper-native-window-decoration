@@ -62,8 +62,7 @@ exports.decorateConfig = config => {
 }
 
 function setTitle(title) {
-  const win = require('electron').remote.getCurrentWindow();
-  win.setTitle(title || DEFAULT_TITLE);
+  document.getElementsByTagName("title").innerHTML = (title || DEFAULT_TITLE);
 }
 
 exports.reduceSessions = (state, action) => {
